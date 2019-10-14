@@ -1,0 +1,6 @@
+<!--pages/search/search.wxml-->
+<view class="search-form">
+     <input bindinput="inputSearchWord" value="{{searchWord}}"  class="headers-input"  placeholder="请输入搜索内容"  />
+     <button bindtap="search" class="search-btn">搜索</button>
+</view>
+ <newsList newsList="{{searchList}}"></newsList>

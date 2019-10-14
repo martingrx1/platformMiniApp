@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "newsList": "../../../../components/NewsList/newsList",
+    "i-tabs": "../../dist/tabs/index",
+    "i-tab": "../../dist/tab/index"
+  }
+}

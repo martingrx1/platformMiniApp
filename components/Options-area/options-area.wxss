@@ -1,0 +1,41 @@
+/* pages/index/components/Options-area/options-area.wxss */
+
+.options-area-box {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0rpx 0 0rpx 0;
+ 
+}
+
+.options-item {
+  flex: 1;
+  height: 100rpx;
+}
+
+.options-icon-box {
+  position: relative;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+}
+
+.options-icon{
+  font-size: 40rpx !important;
+}
+
+.options-name {
+  height: 30rpx;
+  line-height: 20rpx;
+  text-align: center;
+  font-size: 20rpx;
+}
+.noIcon-options-name{
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: white;
+  font-weight: 400;
+  background-color: green;
+}
+
+@import '/assets/iconfont/iconfont.wxss';

@@ -1,0 +1,34 @@
+<!-- pages/index/components/NewsList/newsList.wxml -->
+
+  <block wx:for="{{newsList}}" wx:key="{{index}}">
+    <view bindtap='handleTo_detailPage' data-item='{{item}}' class='newsList-item'>
+      <view class="newsList-intr">
+        <view class="newsList-intr-portrait">
+          <image src="{{item.user_wxInfo.avatarUrl}}" mode='scaleToFill' />
+        </view>
+        <view class="newsList-userInfo">
+          <view class="newsList-userInfo-name">{{item.user_wxInfo.nickName}}</view>
+          <view class="newsList-userInfo-title">{{item.publishInfo.title}}</view>
+        </view>
+        <view class="newsList-note {{(item.publishInfo.type === '遗失')?'brown':''}}">
+          {{item.publishInfo.type}}
+        </view>
+      </view>
+      <view class="newsList-img" wx:if="{{item.publishInfo.imgPath.length > 0}}">
+        <block wx:for="{{item.publishInfo.imgPath}}" wx:key="imgIndex" wx:for-item="img" wx:for-index="imgIndex">
+          <image catchtap="previewImg" data-path="{{img}}" data-pathlist="{{item.publishInfo.imgPath}}" wx:if="{{imgIndex < 3}}" mode='scaleToFill' src="{{img}}" />
+        </block>
+      </view>
+      <view class="label-block">
+        <view class="news-detail">{{item.displayTime}}</view>
+        <view class="news-tags">
+          <i-tag  wx:if="{{item.resolve === '已解决'}}"  class="newsTag i-tags" color='yellow'>已解决</i-tag>
+           <i-tag  wx:else  class="newsTag i-tags" color='default'>未解决</i-tag>
+          <i-tag class="newsTag i-tags" color='green' name="单个标签">{{item.publishInfo.location}}</i-tag>
+          <i-tag class="newsTag i-tags" name="单个标签" color="blue">{{item.publishInfo.goodsType}}</i-tag>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- <i-divider wx:if="{{!isAllloading}}" i-class="btm-divider" content="下滑加载更多"></i-divider>
+  <i-divider wx:else  i-class="btm-divider" content="加载完成,暂无更多数据数据"></i-divider> -->

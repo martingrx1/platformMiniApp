@@ -1,0 +1,6 @@
+<!--pages/Mypublish/mypublish.wxml-->
+<view slot="headers-content" class="change-function">
+  <view wx:for="{{block}}" bindtap="changeShow" wx:key="index" data-index="{{index}}" class="toLose" class="{{index === titleIndex?'active':''}}">{{item.title}}</view>
+</view>
+<newsList newsList="{{myPublish}}"></newsList>
+<emptyTips wx:if="{{myPublish.length < 1}}" tipsWord="您还没有发布过消息哦" tipsIcon="wxreply"></emptyTips>

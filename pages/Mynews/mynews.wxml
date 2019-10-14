@@ -1,0 +1,5 @@
+<!--pages/Mynews/mynews.wxml-->
+<view class="mynews-page">
+ <emptyTips wx:if="{{chatList.length < 1}}" tipsWord="暂无消息回复" tipsIcon="wxreply"></emptyTips>
+ <replyCard chatList="{{chatList}}" curStu_id="{{curStu_id}}"></replyCard>
+</view>

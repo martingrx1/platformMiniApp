@@ -1,0 +1,20 @@
+<!-- pages/index/components/NewsList/newsList.wxml -->
+  <block wx:for="{{chatList}}" wx:key="{{index}}">
+    <view bindtap='handleTo_chatPage' data-item='{{item}}' class='newsList-item'>
+      <view class="newsList-intr">
+        <view class="newsList-intr-portrait">
+        <!-- 将头像显示为另一个发消息的人的头像 -->
+          <image src="{{item.fq_info.stuId === curStu_id?item.js_info.user_wxInfo.avatarUrl:item.fq_info.user_wxInfo.avatarUrl }}" mode='scaleToFill' />
+        </view>
+        <view class="newsList-userInfo">
+        <!-- 更改当前对话记录的头像和用户名为另一个对话的用户 -->
+          <view class="newsList-userInfo-name">{{item.fq_info.stuId === curStu_id?item.js_info.user_wxInfo.nickName:item.fq_info.user_wxInfo.nickName}}</view>
+          <view class="newsList-userInfo-title">{{item.publishInfo.title}}</view>
+        </view>
+      </view>
+      <view class="label-block">
+        <view class="news-detail">{{item.date}} {{item.time}}</view>
+      </view>
+       
+    </view>
+  </block>

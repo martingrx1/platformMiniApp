@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+      "pages/trading/trading",
+   
+    "pages/search/search",
+    "pages/find/find",
+    "pages/audit/audit",
+    "pages/mine/mine",
+    "pages/chat/chat",
+    "pages/Mynews/mynews",
+  
+    "pages/DetailPage/detailPage",
+    "pages/Mypublish/mypublish",
+    "pages/browsinghistory/browsinghistory"
+  ],
+  "tabBar": {
+    "selectedColor": "#ff5777",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/images/tabbar/home.png",
+        "selectedIconPath": "assets/images/tabbar/home_active.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "失物招领",
+        "iconPath": "assets/images/tabbar/category.png",
+        "selectedIconPath": "assets/images/tabbar/category_active.png"
+      },
+      {
+        "pagePath": "pages/trading/trading",
+        "text": "悬赏交易",
+        "iconPath": "assets/images/tabbar/category.png",
+        "selectedIconPath": "assets/images/tabbar/category_active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "assets/images/tabbar/profile.png",
+        "selectedIconPath": "assets/images/tabbar/profile_active.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#87CEFA",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "headers": "/components/Headers/headers"
+  },
+  "sitemapLocation": "sitemap.json"
+}

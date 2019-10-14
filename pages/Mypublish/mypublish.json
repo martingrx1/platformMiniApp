@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我发布的消息",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "newsList": "../../../components/NewsList/newsList",
+    "emptyTips": "../../../components/EmptyTips/emptyTips"
+  }
+}

@@ -1,0 +1,18 @@
+<!-- pages/chat/chat.wxml -->
+<view class="chat-page">
+    <scroll-view scroll-y style="height: 100%;" scroll-top='{{scrollTop}}rpx' >
+        <view wx:for="{{chatInfo.chat}}" wx:key="index"  id="msg{{index}}" class="chatMsg  {{user_Id===item.role?'rightMsg':'leftMsg'}}">
+            <view class=" portraitImg">
+                <image scaleToFill src="https://wx.qlogo.cn/mmopen/vi_32/6gRNnc6ibDHxYXfVGDgOXxjwApHuFOu3xrlKqvMpdLs10VbQlHzG7EuOFicLXpDh99RD5zx1YGcA5F4pUeCfYTicA/132" />
+            </view>
+            <view class="margin-block"></view>
+            <view class="chatMsg-content">{{item.content}}</view>
+            <view class="chatMsg-time">{{item.time}}</view>
+        </view>
+        <view class="stone"></view>
+    </scroll-view>
+    <view class="replyArea">
+            <input value="{{replyContent}}" class="replyInput" bindinput="edit_reply" />
+            <button bindtap="confirmReply" class="replyBtn" type="success">回复</button>
+    </view>
+</view>

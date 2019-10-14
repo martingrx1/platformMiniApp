@@ -1,0 +1,9 @@
+{
+  "component": true,
+  
+  "usingComponents": {
+    "i-tag": "../../dist/tag/index",
+    "i-page": "../../dist/page/index",
+    "i-divider": "../../dist/divider/index"
+  }
+}

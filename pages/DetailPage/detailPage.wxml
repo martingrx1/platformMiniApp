@@ -1,0 +1,38 @@
+<!-- pages/DetailPage/detailPage.wxml -->
+<view class="detail-page">
+  <view class="intro-image-box">
+    <swiper indicator-dots="{{true}}"  indicator-color='grey' indicator-active-color='white' autoplay="{{autoplay}}" interval="{{interval}}" circular='true' duration="{{duration}}" class="swiper-box">
+      <block wx:for="{{singleMsg.publishInfo.imgPath}}" wx:for-item="img">
+        <swiper-item>
+          <image src="{{img}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="briefInfo-box">
+    <text wx:if="{{singleMsg.publishInfo.price}}" class="price">¥{{singleMsg.publishInfo.price}}</text>
+
+    <view class="briefInfo-title">{{singleMsg.publishInfo.title}}</view>
+    <view class="briefInfo-type">{{singleMsg.publishInfo.type}}</view>
+    <view class="briefInfo-note">
+      <view class="briefInfo-date">{{singleMsg.date}}</view>
+      <view class="briefInfo-tag">
+        <i-tag class="briefInfoTag i-tags" color='green'>{{singleMsg.publishInfo.location}}</i-tag>
+        <i-tag class="briefInfoTag i-tags" color="blue">{{singleMsg.publishInfo.goodsType}}</i-tag>
+      </view>
+    </view>
+  </view>
+  <view class="detailInfo-box">
+    <text class="detailInfo">详细信息</text>
+    <view class="detailInfo-content">{{singleMsg.publishInfo.content}}</view>
+  </view>
+  <view class="comments-area"></view>
+  <view class="detail-page-tabBar">
+    <options-area wx:if="{{optionsList_index === 0}}" msgInfo="{{singleMsg}}" js_info="{{publisher_info}}" optionsList="{{optionsList[optionsList_index]}}"></options-area>
+    <options-area wx:if="{{optionsList_index === 1}}" msgInfo="{{singleMsg}}" js_info="{{publisher_info}}" optionsList="{{optionsList[optionsList_index]}}"></options-area>
+    <options-area wx:if="{{optionsList_index === 2}}" msgInfo="{{singleMsg}}" optionsList="{{optionsList[optionsList_index]}}"></options-area>
+    <options-area wx:if="{{optionsList_index === 3}}" optionsList="{{optionsList[optionsList_index]}}"></options-area>
+    <options-area wx:if="{{optionsList_index === 4}}" optionsList="{{optionsList[optionsList_index]}}"></options-area>
+    <options-area wx:if="{{optionsList_index === 5}}" optionsList="{{optionsList[optionsList_index]}}"></options-area>
+  </view>
+</view>

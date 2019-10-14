@@ -1,0 +1,4 @@
+/* pages/Mynews/mynews.wxss */
+.mynews-page{
+  height: 100%;
+}

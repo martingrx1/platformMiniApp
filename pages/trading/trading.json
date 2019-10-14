@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "二手交易",
+  "usingComponents": {
+    "seek": "./components/Sell/index",
+    "lose": "./components/Buy/index"
+  }
+}

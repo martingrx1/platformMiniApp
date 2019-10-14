@@ -1,0 +1,4 @@
+<!--components/Headers/headers.wxml-->
+<view class='headers'>
+<slot name="headers-content"></slot>
+</view>

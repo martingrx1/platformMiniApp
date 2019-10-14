@@ -1,0 +1,35 @@
+<view id="mine-page">
+
+  <view wx:if="{{!isLogined}}" class="userLogin-form">
+    <form>
+      <view class="login-title">登录</view>
+      <input class="login-input" type="number" bindinput="bind_input" data-type='stuId' maxlength="12" autofocus placeholder="轻工大校园卡学号" />
+      <input class="login-input" type="number" bindinput="bind_input" data-type='userPhone' type="number" maxlength="13" placeholder="请输入密码" />
+      <radio-group class="radio-group mine-radio-group" bindchange="radioChange">
+        <label class="radio mine-radio" wx:for="{{items}}">
+          <radio class="mine-radio" value="{{item.name}}" checked="{{item.checked}}" />
+          {{item.value}}
+        </label>
+      </radio-group>
+      <view class="login-btn-group">
+        <button open-type="getUserInfo" bindgetuserinfo="registered" type="default">注册</button>
+        <button open-type="getUserInfo" bindgetuserinfo="checkoutLogin">登录</button>
+      </view>
+    </form>
+  </view>
+
+  <view wx:else class="displayUserInfo-box">
+    <i-card class='userInfo-card' title="{{wx_userInfo.nickName}}" extra="学号:{{db_userInfo.stuId}}" thumb="{{wx_userInfo.avatarUrl}}">
+      <!-- <view class="detail-info" slot="content">{{db_userInfo.permissions}}</view> -->
+      <view class="detail-info" slot="content">{{db_userInfo.location}}</view>
+      <view class="detail-info" slot="content">
+        <options-area optionsList="{{optionsList}}"></options-area>
+      </view>
+      <!-- <view slot="footer">尾部内容</view> -->
+    </i-card>
+    <view class="edit-btn-group">
+      <!-- <button type="primary">修改用户信息</button> -->
+      <!-- <button bindtap="signout" type="warn">登出</button> -->
+    </view>
+  </view>
+</view>

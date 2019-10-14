@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "失物招领",
+  "disableScroll": true,
+  "usingComponents": {
+    "seek": "./components/Seek/seek",
+    "lose": "./components/Lose/lose"
+  }
+}

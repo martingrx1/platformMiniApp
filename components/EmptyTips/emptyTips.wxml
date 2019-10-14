@@ -1,0 +1,8 @@
+<!--components/EmptyTips/emptyTips.wxml-->
+<view class="emptyTips">
+  <view class="tips">
+    <text class="iconfont tipsIcon  {{tipsIcon}}"></text>
+    <text class="tipsWord">{{tipsWord}}</text>
+  </view>
+
+</view>

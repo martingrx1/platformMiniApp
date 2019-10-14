@@ -1,0 +1,4 @@
+<!--pages/Mypublish/mypublish.wxml-->
+<newsList newsList="{{checkoutList}}" newsType="{{auditType}}"></newsList>
+<emptyTips wx:if="{{checkoutList.length < 1}}" tipsWord="暂无需要审核的信息" tipsIcon="wxreply"></emptyTips>
+

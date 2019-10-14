@@ -1,0 +1,25 @@
+/* pages/Mypublish/mypublish.wxss */
+.title{
+  text-align: center;
+  font-size: 28rpx;
+  margin: 10rpx 0;
+}
+.change-function{
+    position: relative;
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.change-function view{
+    flex:1;
+    text-align: center;
+    height: 80rpx;
+    font-size: 20rpx;
+    line-height: 80rpx;
+
+}
+.active{
+    border-bottom: 2px solid rgb(192, 81, 81);
+}

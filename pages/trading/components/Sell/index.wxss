@@ -1,0 +1,144 @@
+.seek-box {
+  width: 100%;
+}
+
+.form-area {
+  padding: 20rpx;
+}
+
+.seek-form-text {
+  border: 1px solid black;
+  padding: 20rpx;
+}
+
+.seek-form-title {
+  height: 40px;
+}
+
+.seek-form-title::after {
+  content: "";
+  display: block;
+  margin: 0 5rpx 0 5rpx;
+  border: 1px solid rgb(243, 233, 233);
+}
+
+.title-input {
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.seek-form-content {
+  height: 120px;
+  margin-top: 10px;
+}
+
+.title-textarea {
+  font-size: 14px;
+  height: 120px;
+}
+
+
+
+.seek-form-radio {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+}
+
+.radio-section {
+  flex: 1;
+  border-radius: 10px;
+  font-size: 28rpx;
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+}
+
+.type-radio {
+  background-color: rgb(221, 50, 44);
+  color: white;
+  margin-right: 10px;
+}
+
+.location-radio {
+  background-color: rgb(112, 223, 223);
+  color: white;
+  margin-right: 10px;
+}
+
+.item-radio {
+  background-color: rgb(129, 206, 57);
+  color: white;
+}
+
+.selectPrice{
+  display: flex;
+  flex-wrap: wrap;
+  height: 150rpx;
+  margin: 20rpx 0;
+  outline: 1px solid rgb(221, 224, 221);
+  
+}
+.priceOptions{
+  flex-basis: 25%;
+  text-align: center;
+  line-height: 75rpx;
+  outline: 1px solid rgb(221, 224, 221);
+}
+.editPrice{
+  width: 100%;
+  height: 100%;
+  line-height: 75rpx;
+}
+.priceActive{
+  outline: 2px solid orange;
+  color: orange;
+}
+
+.seek-form-photo {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  border-radius: 5px;
+  height: 200rpx;
+  padding: 5rpx;
+  border: 1px dashed green;
+  overflow: hidden;
+}
+
+.stone {
+  float: right;
+  width: 33%;
+  height: 50px;
+}
+
+.seek-form-photo image {
+  position: relative;
+  flex-basis: 32%;
+  flex-shrink: 1;
+  height: 95rpx;
+}
+.delete_icon{
+  position: absolute;
+  right: 5rpx;
+  top: 5rpx;
+}
+
+.seek-form-photo:nth-child(3n+0) {
+  margin-right: 0;
+}
+
+.upload-photo-tips {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 200rpx;
+  margin: 0 auto;
+}
+
+.seek-form-btn button {
+  margin-top: 10px;
+}

@@ -1,0 +1,8 @@
+<!-- pages/index/components/Options-area/options-area.wxml -->
+<view class="options-area-box">
+    <view wx:for="{{optionList}}" wx:key="index" class="options-item">
+    <view class="options-icon-box"><text class="iconfont  options-icon {{item.icon}}"></text></view>
+    <view class="options-name">{{item.title}}</view>
+    </view>
+</view>
+

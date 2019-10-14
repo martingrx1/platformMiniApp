@@ -1,0 +1,6 @@
+/* components/Headers/headers.wxss */
+
+.headers{
+  height: 80rpx;
+}
+

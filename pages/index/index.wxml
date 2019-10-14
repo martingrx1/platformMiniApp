@@ -1,0 +1,29 @@
+<!-- pages/index/index.wxml -->
+<view id='idnex-page'>
+<!-- 头部slot插槽 -->
+  <headers>  
+    <view slot="headers-content">
+    <input class="headers-input" bindtap='handleToSearch' placeholder="搜索" disabled='true' />
+    </view>
+  </headers>
+  <!-- 轮播图 -->
+  <swiper circular='true' class="swiper-box" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- <options-area></options-area> -->
+  <view class='newsDisplay-area'>
+    <view class='newDisplay-top'>
+      <view class="newDisplay-title">
+        <text>最新消息</text>
+      </view>
+    </view>
+    <!-- 最新消息展示 -->
+    <view class='newsDisplay-content'> 
+      <newsList newsList="{{all_newsList}}" isAllloading="{{isAllloading}}"></newsList>
+    </view>
+  </view>
+</view>

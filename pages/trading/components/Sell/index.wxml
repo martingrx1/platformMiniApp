@@ -1,0 +1,41 @@
+<!-- pages/find/components/Seek/seek.wxml -->
+<view class="seek-box">
+  <form>
+    <view class="form-area">
+      <view class="seek-form-text">
+        <view class="seek-form-title">
+          <input bindinput="bind_input"  maxlength="12" data-type='title'  value="{{publishInfo.title}}" class="title-input" placeholder='标题' />
+        </view>
+        <view class="seek-form-content">
+          <textarea  bindinput="bind_input" data-type='content' value="{{publishInfo.content}}" class="title-textarea" placeholder='正文内容'></textarea>
+        </view>
+      </view>
+      <view class="seek-form-radio">
+        <view bindtap='pop_selectLocation' class="radio-section location-radio">
+          <text >{{publishInfo.location?publishInfo.location:'选择遗失地点'}}</text>
+        </view>
+        <view bindtap='pop_selectType' class="radio-section type-radio">
+          <text>{{publishInfo.type?publishInfo.type:'选择发布方式'}}</text>
+        </view>
+        <view bindtap='pop_selectGoodsType' class="radio-section item-radio">
+          <text>{{publishInfo.goodsType?publishInfo.goodsType:'选择遗失物品'}}</text>
+        </view>
+      </view>
+      <view class="selectPrice">
+        <view bindtap="selectPrice" class="priceOptions {{index === selectPrice_index?'priceActive':''}}" wx:for="{{price}}" data-index="{{index}}" wx:key="index">{{item}}元</view>
+         <view bindtap="editPriceTap" class="priceOptions {{selectPrice_index === 7?'priceActive':''}}"><input bindinput="editPriceInput" value="{{editPrice}}" type="number" maxlength="4" class="editPrice" placeholder="自定义"></input></view>
+      </view>
+      <view bindtap='upload_photo' class="seek-form-photo">
+        <view wx:if="{{publishInfo.imgPath.length === 0}}" class="upload-photo-tips">点击上传照片</view>
+        <image  wx:for="{{publishInfo.imgPath}}" src="{{item}}" >
+          <icon catchtap="delete_photo" data-index="{{index}}" class="delete_icon" type="clear" size="15"/>
+        </image>
+        <view wx:if="{{publishInfo.imgPath.length < 6}}" class="stone"></view>
+      </view>
+      <view class="seek-form-btn">
+        <button type="primary" bindtap='pulish_info' >发布</button>
+        <button type="warn" bindtap='clear_edit'>清除输入内容</button>
+      </view>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,77 @@
+/* pages/chat/chat.wxss */
+.chat-page{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(236, 233, 233, 0.377);
+}
+.chatMsg{
+    display: flex;
+    padding: 10rpx;
+}
+.portraitImg{
+    height: 80rpx;
+    flex-basis: 80rpx;
+}
+.portraitImg image{
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+.leftMsg{
+   flex-direction: row;
+}
+.rightMsg{
+    flex-direction: row-reverse;
+ }
+.margin-block{
+    flex-basis: 30rpx;
+}
+.chatMsg-content{
+    flex-basis: 50%;
+    padding: 10rpx;
+    font-size: 25rpx;
+    text-indent: 1em;
+    background-color: white;
+}
+.chatMsg-time{
+  font-size: 23rpx;
+  margin: auto;
+}
+
+.stone{
+    width: 100%;
+    height: 110rpx;
+}
+.replyArea{
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 20rpx;
+    width: 100%;
+    height: 90rpx;
+    background-color: rgb(250, 246, 246);
+}
+
+.replyInput{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    flex: 8;
+    margin: 0 15rpx;
+    padding: 0 20rpx;
+    height: 60rpx;
+    background-color: white;
+}
+.replyBtn{
+    flex: 2;
+    margin: auto;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 20rpx;
+    margin-right: 15rpx;
+}

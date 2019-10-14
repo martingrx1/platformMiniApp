@@ -1,0 +1,36 @@
+/* pages/index/components/Options-area/options-area.wxss */
+
+.options-area-box {
+  display: flex;
+  flex-flow: row wrap;
+  height: 200rpx;
+  padding: 20rpx;
+  margin-top: 5px;
+  border-top: 3px solid rgba(202, 196, 196, 0.479);
+  border-bottom: 3px solid rgba(202, 196, 196, 0.479);
+}
+
+.options-item {
+  flex-basis: 20%;
+  height: 100rpx;
+}
+
+.options-icon-box {
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+}
+
+.options-icon{
+  font-size: 40rpx !important;
+}
+
+.options-name {
+  height: 30rpx;
+  line-height: 30rpx;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20rpx;
+}
+
+@import '/assets/iconfont/iconfont.wxss';

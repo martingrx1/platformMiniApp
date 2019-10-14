@@ -1,0 +1,17 @@
+<!-- pages/find/components/lose/lose.wxml -->
+
+<view class="lose-fliter-box">
+  <view class="my-tabs">
+    <view  wx:for="{{tabs}}" wx:key="index" wx:for-item="tab" data-index="{{tab.index}}" class="my-tab " bindtap='show_downlist'>
+      <text class="my-tab-title">{{tab.title}}</text>
+      <view wx:if="{{current_index === tab.index}}" class="my-downlist">
+        <view wx:for="{{tab.downlist}}" wx:for-item="downlistItem" catchtap="fliter" data-index='{{downlistItem.index}}' class="my-downlist-item">
+          <view class="downlist-title">{{downlistItem.title}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<scroll-view scroll-y="true" style="height: {{scroll_height}}rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" >
+<newsList bindtap='reset_downlist' newsList="{{fliter_newsList}}" isAllloading="{{isAllloading}}"></newsList>
+  </scroll-view>

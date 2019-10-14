@@ -1,0 +1,63 @@
+/* pages/find/components/lose/lose.wxss */
+.lose-fliter-box{
+  width: 100%;
+  height: 60rpx;
+  padding-top: 10px;
+  background-color: white;
+}
+.my-tabs{
+  display: flex;
+  width: 100%;
+}
+.my-tab{
+  position: relative;
+  flex: 1;
+  background-color: white;
+  text-align: center;
+  border-right: 1px solid rgb(190, 184, 184);
+}
+.my-tab-title{
+  font-size: 20rpx;
+  line-height: 60rpx;
+}
+.my-downlist{
+  display: flex;
+  flex-direction:column;
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 10rpx;
+  width: 80%;
+  z-index: 1;
+  background-color: white;
+  animation: down .5s  forwards;
+  border: 1PX solid black;
+  box-shadow: 0px 0px 5px;
+  overflow: hidden;
+}
+.down-action{
+  animation: down .5s  forwards;
+}
+.up-action{
+  animation: down .5s  reverse;
+}
+@keyframes  down{
+  0%{
+    height: 0;
+  }
+  100%{
+    height: 120px;
+  }
+}
+.my-downlist-item{
+ 
+  flex: 1;
+  font-size: 18rpx;
+  border-bottom: 1px solid rgb(160, 153, 153);
+}
+.downlist-title{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+
+}

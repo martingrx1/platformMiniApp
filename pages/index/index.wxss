@@ -1,0 +1,42 @@
+/* pages/index/index.wxss */
+
+.swiper-box{
+    width: 100%;
+    height: 300rpx;
+    margin-top: 5rpx;
+  }
+  .slide-image{
+    width: 100%;
+    height: 100%;
+  }
+
+  .headers-input{
+    position: relative;
+    top: 50%;
+    transform: translateY(25%);
+    width: 90%;
+    height: 50rpx;
+    margin: 0 auto;
+    border: 1px solid rgb(68, 67, 67);
+    border-radius: 20px;
+    text-align: center;
+    font-size: 28rpx;
+  }
+  .newsDisplay-area{
+    width: 100%;
+    margin-top: 10px;
+  }
+  .newDisplay-title{
+    height: 70rpx;
+    border-bottom: 4px solid rgb(54, 177, 214);
+  }
+  .newDisplay-title{
+    width: 100%;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    color: rgb(54, 177, 214);
+  }
+  .newsDisplay-content{
+    margin-top: 10px;
+  }

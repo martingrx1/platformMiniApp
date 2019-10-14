@@ -1,0 +1,59 @@
+/* pages/mine/mine.wxss */
+
+.userLogin-form {
+  transform: translateY(60%);
+  padding: 10rpx;
+  border-top: 1px solid rgba(238, 226, 226, 0.76);
+}
+.login-title{
+  text-align: center;
+  font-size: 32rpx;
+  color: rgb(50, 195, 221);
+  margin-bottom: 10rpx;
+}
+.login-input{
+  display: block;
+  height: 60rpx;
+  padding-left: 20rpx;
+  margin-top: 20rpx;
+  font-size: 25rpx;
+  border: 1px solid gray;
+
+}
+
+.mine-radio-group {
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 1px solid rgba(238, 226, 226, 0.76);
+}
+
+.mine-radio {
+  flex: 1;
+  font-size: 20rpx;
+  text-align: center;
+}
+
+.login-btn-group {
+  margin-top: 20rpx;
+}
+
+.login-btn-group button {
+  margin-top: 15rpx;
+  font-size: 30rpx;
+}
+
+.displayUserInfo-box {
+  margin-top: 20rpx;
+}
+
+.detail-info {
+}
+
+.edit-btn-group {
+  width: 92%;
+  margin: 0 auto;
+}
+
+.edit-btn-group button {
+  margin-top: 15rpx;
+}

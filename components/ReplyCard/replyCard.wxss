@@ -1,0 +1,45 @@
+/* pages/index/components/NewsList/newsList.wxss */
+.newsList-item{
+    position: relative;
+    z-index: 0;
+    padding: 15rpx;
+    border-bottom: 1px solid rgb(211, 202, 202);
+}
+.newsList-intr{
+    display: flex;
+    height: 80rpx;
+}
+.newsList-intr-portrait{
+    flex-basis: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.newsList-intr-portrait image{
+    width: 100%;
+    height: 100%;
+}
+.newsList-userInfo{
+    flex: 6;
+    height: 80rpx;
+    padding-left: 20rpx;
+    padding-top: 6rpx;
+}
+.newsList-userInfo-name{
+    font-size: 25rpx;
+    color: palevioletred;
+}
+.newsList-userInfo-title{
+    width: 400rpx;
+    font-size: 30rpx;
+    color: rgb(19, 20, 20);
+    overflow:hidden; /*超出的部分隐藏起来。*/ 
+    white-space: nowrap;
+    text-overflow:ellipsis;/* 支持 IE */
+}
+.label-block{
+    margin-top: 10rpx;
+    color: gray;
+    font-size: 25rpx;
+    overflow: hidden;
+}

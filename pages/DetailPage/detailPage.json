@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-tag": "../../dist/tag/index",
+    "options-area": "../../components/Options-area/options-area"
+   
+  }
+}

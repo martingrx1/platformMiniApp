@@ -1,0 +1,15 @@
+<!-- pages/index/components/Options-area/options-area.wxml -->
+<view class="options-area-box">
+  <view bindtap="handleTo_pubPage" data-itemInfo="{{item}}" wx:for="{{optionsList}}" wx:key="index" class="options-item" style="flex:{{item.flex?item.flex:1}}; ">
+      <block wx:if="{{item.icon}}">
+        <view class="options-icon-box">
+          <text class="iconfont  options-icon {{item.icon}}"></text>
+          <i-badge wx:if="{{item.badge_count > 0}}" count="{{item.badge_count}}">
+            <view></view>
+          </i-badge>
+        </view>
+        <view class="options-name">{{item.title}}</view>
+      </block>
+      <view class="noIcon-options-name" style="background-color: {{item.color?item.color:''}}" wx:else>{{item.title}}</view>
+  </view>
+</view>

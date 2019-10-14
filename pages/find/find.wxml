@@ -1,0 +1,13 @@
+<!-- pages/find/find.wxml -->
+<view id="find-page">
+  <headers>
+    <view slot="headers-content" class="change-function">
+      <view bindtap="changeShow" class="toLose" class="{{!isShowSeek?'active':''}}">寻找失物</view>
+      <view bindtap="changeShow" class="toFind" class="{{isShowSeek?'active':''}}">发布失物消息</view>
+    </view>
+  </headers>
+  <view class="find-page-content">
+    <lose wx:if='{{!isShowSeek}}'></lose>
+    <seek wx:if='{{isShowSeek}}'></seek>
+  </view>
+</view>

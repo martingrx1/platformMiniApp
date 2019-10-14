@@ -1,0 +1,6 @@
+/* pages/Mypublish/mypublish.wxss */
+.title{
+  text-align: center;
+  font-size: 28rpx;
+  margin: 10rpx 0;
+}
